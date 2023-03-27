@@ -778,38 +778,26 @@
                             <h3 class="scroll-animation" data-animation="fade_from_bottom" style="">nmishra1309@gmail.com
                             </h3>
                             <p id="required-msg">* Marked fields are required to fill.</p>
-                            <form class="contact-form scroll-animation" data-animation="fade_from_bottom" netlify method="POST"
-                                action="hmailer.php" style="">
-                                <div class="alert alert-success messenger-box-contact__msg" style="display: none"
+                            <form class="contact-form scroll-animation" data-animation="fade_from_bottom" method="POST"
+                                action="hmailer.php" style="" netlify>
+                                <div id="msg" class="alert alert-success messenger-box-contact__msg" style="display: none"
                                     role="alert">
                                     Your message was sent successfully.
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="input-group">
-                                            <label for="full-name">full Name <sup>*</sup></label>
+                                            <label for="full-name">Full Name <sup>*</sup></label>
                                             <input type="text" name="full-name" id="full-name"
                                                 placeholder="Your Full Name">
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="input-group">
-                                            <label for="email">Email <sup>*</sup></label>
-                                            <input type="email" name="email" id="email" placeholder="Your email adress">
-                                        </div>
-                                    </div>
+                                    
                                     <div class="col-md-6">
                                         <div class="input-group">
                                             <label for="phone-number">phone <span>(optional)</span></label>
                                             <input type="text" name="phone-number" id="phone-number"
                                                 placeholder="Your number phone">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="input-group">
-                                            <label for="subject">subject <sup>*</sup></label>
-                                            <input type="text" name="subject" id="subject"
-                                            placeholder="Your number phone">
                                         </div>
                                     </div>
                                    
@@ -823,7 +811,7 @@
                                    
                                     <div class="col-md-12">
                                         <div class="input-group submit-btn-wrap">
-                                            <button class="theme-btn" name="submit" type="submit" id="submit-form">send
+                                            <button class="theme-btn"  onclick="showmsg();" name="submit" type="submit" id="submit-form">send
                                                 message</button>
                                         </div>
                                     </div>
@@ -870,3 +858,12 @@
 </body>
 
 </html>
+
+
+<script>
+
+
+    function showmsg(){
+        document.getElementById("msg").style.display = "block";
+    }
+</script>
