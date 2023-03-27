@@ -1,6 +1,24 @@
 <!DOCTYPE html>
 <!-- saved from url=(0054)index.html -->
 <html lang="en" style="scroll-behavior: smooth;">
+<style>
+    .float {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 40px;
+        right: 40px;
+        background-color: #0C9;
+        color: #FFF;
+        border-radius: 50px;
+        text-align: center;
+        box-shadow: 2px 2px 3px #999;
+    }
+
+    .my-float {
+        margin-top: 22px;
+    }
+</style>
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -43,6 +61,13 @@
     <div class="page-loader" style="display: none;">
         <div class="bounceball"></div>
     </div>
+    <span class="icon-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </span>
+    <!-- <a href="#" class="float mr-3">
+    <i class="fa fa-plus my-float "></i>
+    </a> -->
     <!-- <div class="global-color">
         <span class="setting-toggle">
             <i class="las la-cog"></i>
@@ -126,6 +151,8 @@
                         </a>
                     </li>
                 </ul>
+
+
             </div>
             <div class="sidebar-social">
                 <p>Social</p>
@@ -185,6 +212,7 @@
             </a>
         </li>
     </ul>
+
     <div class="left-sidebar">
         <div class="sidebar-header d-flex align-items-center justify-content-between">
             <img src="assets/logo.png" height="90px" alt="Logo">
@@ -803,11 +831,11 @@
                                 </h1>
                             </div>
                             <h3 class="scroll-animation" data-animation="fade_from_bottom" style="">
-                                nmishra1309@gmail.com , +91 9699326182
+                                nmishra1309@gmail.com
                             </h3>
                             <p id="required-msg">* Marked fields are required to fill.</p>
-                            <form class="contact-form scroll-animation" data-animation="fade_from_bottom" id="form" method="POST"
-                            data-netlify="true" style="" netlify>
+                            <form class="contact-form scroll-animation" data-animation="fade_from_bottom" id="form"
+                                method="POST" data-netlify="true" style="" netlify>
                                 <div id="msg" class="alert alert-success messenger-box-contact__msg"
                                     style="display: none" role="alert">
                                     Your message was sent successfully.
@@ -823,15 +851,15 @@
 
                                     <div class="col-md-6">
                                         <div class="input-group">
-                                          <label for="number">Contact Number <sup>*</sup></label>
-                                            <input type="number" name="number" id="number"
-                                                placeholder="Number">
+                                            <label for="phone-number">phone <span>(optional)</span></label>
+                                            <input type="text" name="phone-number" id="phone-number"
+                                                placeholder="Your number phone">
                                         </div>
                                     </div>
 
                                     <div class="col-md-12">
                                         <div class="input-group">
-                                            <label for="message">Message</label>
+                                            <label for="message">message</label>
                                             <textarea name="message" id="message"
                                                 placeholder="Wrire your message here ..."></textarea>
                                         </div>
@@ -860,11 +888,11 @@
     <script src="assets/ScrollToPlugin.min.js.download"></script>
     <script src="assets/lightbox.min.js.download"></script>
     <script src="assets/main.js.download"></script>
-    <script src="assets/ajax-form.js.download"></script>
+    <!-- <script src="assets/ajax-form.js.download"></script> -->
     <script src="assets/color.js.download"></script>
 
 
-   
+
 </body>
 
 </html>
@@ -873,7 +901,7 @@
 <script>
 
 
-function showmsg() {
+    function showmsg() {
         document.getElementById("form").submit.click();
         document.getElementById("msg").style.display = "block";
 
